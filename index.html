@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Website Sederhana — Portfolio</title>
+  <meta name="description" content="Website sederhana yang di-host di GitHub Pages" />
+
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#6ee7b7}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;background:linear-gradient(180deg,#071028 0%,var(--bg) 100%);color:#e6eef8;line-height:1.6}
+    .container{max-width:980px;margin:48px auto;padding:24px}
+    header{display:flex;align-items:center;gap:16px}
+    .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;font-weight:700;color:#042028}
+    h1{margin:0;font-size:1.6rem}
+    p.lead{color:var(--muted);margin-top:6px}
+
+    nav{margin-top:18px}
+    nav a{color:var(--muted);text-decoration:none;margin-right:12px}
+
+    main{display:grid;grid-template-columns:1fr 320px;gap:20px;margin-top:20px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+
+    .hero{padding:18px}
+    .hero h2{margin:0 0 8px 0}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#042028;text-decoration:none;font-weight:600}
+
+    aside .profile{display:flex;gap:12px;align-items:center}
+    .avatar{width:64px;height:64px;border-radius:10px;background:#072133;display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700}
+    footer{margin-top:28px;color:var(--muted);font-size:0.9rem;text-align:center}
+
+    /* responsive */
+    @media (max-width:880px){main{grid-template-columns:1fr} .container{margin:18px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">WS</div>
+      <div>
+        <h1>Website Sederhana</h1>
+        <p class="lead">Contoh halaman statis yang siap di-deploy ke GitHub Pages.</p>
+      </div>
+    </header>
+
+    <nav>
+      <a href="#" aria-current="page">Beranda</a>
+      <a href="#about">Tentang</a>
+      <a href="#projects">Proyek</a>
+    </nav>
+
+    <main>
+      <section class="card hero">
+        <h2 id="about">Halo — aku Portfolio sederhana</h2>
+        <p>Ini adalah template HTML statis: ringan, responsive, dan mudah diubah. Ganti teks, tambahkan gambar, atau sambungkan ke CSS/JS eksternal sesuai kebutuhan.</p>
+        <p><a class="btn" href="#projects">Lihat Proyek</a></p>
+
+        <hr style="border:none;border-top:1px solid rgba(255,255,255,0.04);margin:18px 0" />
+
+        <h3 id="projects">Proyek Terbaru</h3>
+        <ul>
+          <li>Website GitHub Pages — template ini</li>
+          <li>Project A — deskripsi singkat</li>
+          <li>Project B — deskripsi singkat</li>
+        </ul>
+      </section>
+
+      <aside class="card">
+        <div class="profile">
+          <div class="avatar">BR</div>
+          <div>
+            <strong>Nama Kamu</strong>
+            <div style="color:var(--muted);font-size:0.9rem">Deskripsi singkat atau jabatan</div>
+          </div>
+        </div>
+
+        <hr style="border:none;border-top:1px solid rgba(255,255,255,0.04);margin:14px 0" />
+
+        <h4>Kontak</h4>
+        <p style="color:var(--muted);font-size:0.95rem">email@contoh.com<br/>Jakarta, Indonesia</p>
+
+        <h4 style="margin-top:12px">Skill</h4>
+        <div style="color:var(--muted);font-size:0.95rem">HTML • CSS • JavaScript • Git • GitHub Pages</div>
+      </aside>
+    </main>
+
+    <footer>
+      © <span id="year"></span> — Dibuat dengan ❤️. Diterbitkan via GitHub Pages.
+    </footer>
+  </div>
+
+  <script>
+    // update tahun otomatis
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
